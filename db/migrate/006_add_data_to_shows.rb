@@ -1,10 +1,7 @@
-class CreateCharacters < ActiveRecord::Migration[5.1]
+class AddDataToShows < ActiveRecord::Migration[5.1]
   def change
-    create_table :characters do |s|
-      s.string :name
-      s.integer :show_id
-      s.integer :actor_id
-      s.string :catchphrase
-    end
+    add_column :shows, :genre, :string
+    add_column :shows, :day, :string
+    add_column :shows, :season, :string
   end
 end 
